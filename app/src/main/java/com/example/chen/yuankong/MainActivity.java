@@ -145,37 +145,31 @@ public class MainActivity extends Activity implements AMapLocationListener {
                 SharedPreferences.Editor editor = sp.edit();
 
                 // TODO Auto-generated method stub
-                if (userNameValue.equals("php")
-                        && passwordValue.equals("123")) {
-                    Toast.makeText(MainActivity.this, "登录成功",
-                            Toast.LENGTH_SHORT).show();
 
-                    //保存用户名和密码
-                    editor.putString("USER_NAME", userNameValue);
-                    editor.putString("PASSWORD", passwordValue);
+                PostCID(PushDemoReceiver.scid,userNameValue,passwordValue);
 
-                    //是否记住密码
-                    if (remember.isChecked()) {
-                        editor.putBoolean("remember", true);
-                    } else {
-                        editor.putBoolean("remember", false);
-                    }
-                    //是否自动登录
+                //保存用户名和密码
+                editor.putString("USER_NAME", userNameValue);
+                editor.putString("PASSWORD", passwordValue);
 
-                    editor.commit();
-
-                    //跳转
-                    Intent intent = new Intent(MainActivity.this, Login.class);
-                    startActivity(intent);
-                    finish();
+                //是否记住密码
+                if (remember.isChecked()) {
+                    editor.putBoolean("remember", true);
                 } else {
-                    Toast.makeText(MainActivity.this, "用户名或密码错误，请重新登录!",
-                            Toast.LENGTH_SHORT).show();
+                    editor.putBoolean("remember", false);
                 }
+                //是否自动登录
 
-            }
+                editor.commit();
 
-        });
+                //跳转
+                Intent intent = new Intent(MainActivity.this, Login.class);
+                startActivity(intent);
+                finish();
+
+        }
+
+    });
 
         autologin.setOnClickListener(new View.OnClickListener() {
                                          @Override
@@ -337,6 +331,34 @@ public class MainActivity extends Activity implements AMapLocationListener {
             }
         });
         return false;
+    }
+
+    public void PostCID(String cid,String name,String passwd) {
+        // Toast.makeText(MainActivity.mactivity,"来了",5000).show();
+        AsyncHttpClient client = new AsyncHttpClient();
+        String url = "http://192.168.191.1/yuankong/home/user/Add";
+
+        RequestParams params = new RequestParams();
+        params.put("ClientID", cid);
+        params.put("Name",name);
+        params.put("Passwd",passwd);
+        client.post(url, params, new AsyncHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] bytes) {
+
+                if (statusCode == 200) {
+                    Toast.makeText(MainActivity.mactivity, "成功记录ClientID", Toast.LENGTH_SHORT).show();
+                    // Toast.makeText(MainActivity.mactivity, new String(bytes), 5000).show();
+                } else
+                    Toast.makeText(MainActivity.mactivity, new String(bytes), Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(int StatusCode, Header[] headers, byte[] bytes, Throwable throwable) {
+                Toast.makeText(MainActivity.mactivity, "记录ClientID失败", Toast.LENGTH_SHORT).show();
+                throwable.printStackTrace();
+            }
+        });
     }
 }
 

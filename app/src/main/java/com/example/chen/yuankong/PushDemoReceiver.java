@@ -125,8 +125,8 @@ public class PushDemoReceiver extends BroadcastReceiver {
                 // 第三方应用需要将CID上传到第三方服务器，并且将当前用户帐号和CID进行关联，以便日后通过用户帐号查找CID进行消息推送
                 String cid = bundle.getString("clientid");
                 scid=cid;
-                if (!MainActivity.isNotNet)
-                    PostCID(cid);
+//                if (!MainActivity.isNotNet)
+//                    PostCID(cid);
 //                if (GetuiSdkDemoActivity.tView != null) {
 //                    GetuiSdkDemoActivity.tView.setText(cid);
 //                }
@@ -148,32 +148,6 @@ public class PushDemoReceiver extends BroadcastReceiver {
             default:
                 break;
         }
-    }
-
-    public void PostCID(String cid) {
-        // Toast.makeText(MainActivity.mactivity,"来了",5000).show();
-        AsyncHttpClient client = new AsyncHttpClient();
-        String url = "http://192.168.191.1/yuankong/home/user/Add";
-
-        RequestParams params = new RequestParams();
-        params.put("ClientID", cid);
-        client.post(url, params, new AsyncHttpResponseHandler() {
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, byte[] bytes) {
-
-                if (statusCode == 200) {
-                    Toast.makeText(MainActivity.mactivity, "成功记录ClientID", Toast.LENGTH_SHORT).show();
-                    // Toast.makeText(MainActivity.mactivity, new String(bytes), 5000).show();
-                } else
-                    Toast.makeText(MainActivity.mactivity, new String(bytes), Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onFailure(int StatusCode, Header[] headers, byte[] bytes, Throwable throwable) {
-                Toast.makeText(MainActivity.mactivity, "记录ClientID失败", Toast.LENGTH_SHORT).show();
-                throwable.printStackTrace();
-            }
-        });
     }
 
 
