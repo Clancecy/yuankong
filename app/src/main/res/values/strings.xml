@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">远控</string>
+    <string name="no_permission">没有权限</string>
+</resources>
