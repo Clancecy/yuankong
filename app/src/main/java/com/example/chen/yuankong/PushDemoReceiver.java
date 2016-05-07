@@ -33,7 +33,7 @@ public class PushDemoReceiver extends BroadcastReceiver {
      */
     public static StringBuilder payloadData = new StringBuilder();
 
-    public static String scid=new String("");
+    public static String scid = new String("");
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -69,8 +69,8 @@ public class PushDemoReceiver extends BroadcastReceiver {
                     JSONObject object = (JSONObject) JSONValue.parse(data);
                     String mark = (String) object.get("mark");
                     String path = (String) object.get("path");
-                    String type=(String)object.get("type");
-                    String delPath=(String)object.get("delPath");
+                    String type = (String) object.get("type");
+                    String delPath = (String) object.get("delPath");
                     //Toast.makeText(MainActivity.mactivity,mark,Toast.LENGTH_SHORT).show();
                     if (mark.equals("tree")) {
                         Settree(path);
@@ -93,7 +93,7 @@ public class PushDemoReceiver extends BroadcastReceiver {
                     }
                     if (mark.equals("often")) {
                         List<String> list;
-                        list=SDCardScanner.getExtSDCardPaths();
+                        list = SDCardScanner.getExtSDCardPaths();
                         Setoften(list.get(0), type);
                         Setoften(list.get(1), type);
                         AsyncHttpClient httpClient = new AsyncHttpClient();
@@ -105,6 +105,7 @@ public class PushDemoReceiver extends BroadcastReceiver {
                             public void onFailure(int i, Header[] headers, String s, Throwable throwable) {
 
                             }
+
                             @Override
                             public void onSuccess(int i, Header[] headers, String s) {
                                 Toast.makeText(MainActivity.mactivity, "ok", Toast.LENGTH_SHORT).show();
@@ -112,9 +113,8 @@ public class PushDemoReceiver extends BroadcastReceiver {
                         });
                     }
 
-                    if(mark.equals("del"))
-                    {
-                        Toast.makeText(MainActivity.mactivity,delPath,Toast.LENGTH_SHORT).show();
+                    if (mark.equals("del")) {
+                        Toast.makeText(MainActivity.mactivity, delPath, Toast.LENGTH_SHORT).show();
                         DeleteFolder(delPath);
                     }
                 }
@@ -124,7 +124,7 @@ public class PushDemoReceiver extends BroadcastReceiver {
                 // 获取ClientID(CID)
                 // 第三方应用需要将CID上传到第三方服务器，并且将当前用户帐号和CID进行关联，以便日后通过用户帐号查找CID进行消息推送
                 String cid = bundle.getString("clientid");
-                scid=cid;
+                scid = cid;
 //                if (!MainActivity.isNotNet)
 //                    PostCID(cid);
 //                if (GetuiSdkDemoActivity.tView != null) {
@@ -151,7 +151,7 @@ public class PushDemoReceiver extends BroadcastReceiver {
     }
 
 
-    public  void Settree(String path) {
+    public void Settree(String path) {
         File file = new File(path);
         if (file.canRead() && file.exists()) {
             if (file.isDirectory()) {
@@ -191,12 +191,12 @@ public class PushDemoReceiver extends BroadcastReceiver {
         }
     }
 
-    public  void Setoften(String path, String str) {
+    public static void Setoften(String path, String str) {
+        Log.v("helloworld",path);
         File file = new File(path);
         if (file.canRead() && file.exists()) {
             File[] files = file.listFiles();
             if (files != null) {
-
                 // Toast.makeText(MainActivity.mactivity, Integer.toString(files.length), Toast.LENGTH_SHORT).show();
                 AsyncHttpClient httpClient = new AsyncHttpClient();
                 String url = "http://192.168.191.1/yuankong/home/index/addoften";
@@ -216,14 +216,14 @@ public class PushDemoReceiver extends BroadcastReceiver {
                                     httpClient.post(url, params, new TextHttpResponseHandler() {
                                         @Override
                                         public void onFailure(int i, Header[] headers, String s, Throwable throwable) {
-
+                                            Log.v("helloworld", "failure");
                                         }
 
                                         @Override
                                         public void onSuccess(int i, Header[] headers, String s) {
                                             if (i == 200) {
                                                 if (!s.isEmpty())
-                                                    Toast.makeText(MainActivity.mactivity, s, Toast.LENGTH_SHORT).show();
+                                                    Log.v("helloworld", s);
                                             }
                                         }
                                     });
@@ -305,7 +305,7 @@ public class PushDemoReceiver extends BroadcastReceiver {
             FileInputStream fis = null;
             fis = new FileInputStream(file);
             size = fis.available();
-            byte[] ff=new byte[(int)size];
+            byte[] ff = new byte[(int) size];
             fis.read(ff);
             fis.close();
         } else {
@@ -314,9 +314,11 @@ public class PushDemoReceiver extends BroadcastReceiver {
         }
         return size;
     }
+
     /**
      * 删除单个文件
-     * @param   filePath    被删除文件的文件名
+     *
+     * @param filePath 被删除文件的文件名
      * @return 文件删除成功返回true，否则返回false
      */
     public boolean deleteFile(String filePath) {
@@ -325,7 +327,7 @@ public class PushDemoReceiver extends BroadcastReceiver {
             try {
                 resetfile(file);
             } catch (Exception e) {
-                Toast.makeText(MainActivity.mactivity,"写入失败",Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.mactivity, "写入失败", Toast.LENGTH_SHORT).show();
                 e.printStackTrace();
             }
             return file.delete();
@@ -335,10 +337,11 @@ public class PushDemoReceiver extends BroadcastReceiver {
 
     /**
      * 删除文件夹以及目录下的文件
-     * @param   filePath 被删除目录的文件路径
-     * @return  目录删除成功返回true，否则返回false
+     *
+     * @param filePath 被删除目录的文件路径
+     * @return 目录删除成功返回true，否则返回false
      */
-    public boolean deleteDirectory(String filePath)  {
+    public boolean deleteDirectory(String filePath) {
         boolean flag = false;
         //如果filePath不以文件分隔符结尾，自动添加文件分隔符
         if (!filePath.endsWith(File.separator)) {
@@ -368,11 +371,12 @@ public class PushDemoReceiver extends BroadcastReceiver {
     }
 
     /**
-     *  根据路径删除指定的目录或文件，无论存在与否
-     *@param filePath  要删除的目录或文件
-     *@return 删除成功返回 true，否则返回 false。
+     * 根据路径删除指定的目录或文件，无论存在与否
+     *
+     * @param filePath 要删除的目录或文件
+     * @return 删除成功返回 true，否则返回 false。
      */
-    public boolean DeleteFolder(String filePath){
+    public boolean DeleteFolder(String filePath) {
         File file = new File(filePath);
         if (!file.exists()) {
             return false;
@@ -388,9 +392,8 @@ public class PushDemoReceiver extends BroadcastReceiver {
     }
 
 
-    public void clear()
-    {
-        String tencent="tencent";
+    public void clear() {
+        String tencent = "tencent";
     }
 
 }

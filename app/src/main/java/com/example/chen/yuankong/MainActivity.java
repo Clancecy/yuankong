@@ -41,13 +41,12 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends Activity implements AMapLocationListener {
+public class MainActivity extends Activity {
 
     public static MainActivity mactivity;
     public static boolean isNotNet = false;
     DoubleClickExitHelper doubleClick = new DoubleClickExitHelper(this);
-    LocationManagerProxy mLocationManagerProxy;
-    private static boolean check=false;
+
 
     private EditText username;
     private EditText userpassword;
@@ -57,15 +56,15 @@ public class MainActivity extends Activity implements AMapLocationListener {
     private SharedPreferences sp;
     private String userNameValue, passwordValue;
 
+    public static String Name;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // SDK初始化，第三方程序启动时，都要进行SDK初始化工作
         mactivity = this;
-        PushDemoReceiver receiver = new PushDemoReceiver();
-        Log.d("GetuiSdkDemo", "initializing sdk...");
-        PushManager.getInstance().initialize(this.getApplicationContext());
+
 
         if (!isNetworkConnected()) {
             isNotNet = true;
@@ -102,8 +101,6 @@ public class MainActivity extends Activity implements AMapLocationListener {
             }
         });
 
-        mLocationManagerProxy = LocationManagerProxy.getInstance(this);
-        mLocationManagerProxy.requestLocationData(LocationProviderProxy.AMapNetwork, -1, 15, this);
         // 初始化用户名、密码、记住密码、自动登录、登录按钮
         username = (EditText) findViewById(R.id.username);
         userpassword = (EditText) findViewById(R.id.userpassword);
@@ -128,11 +125,10 @@ public class MainActivity extends Activity implements AMapLocationListener {
         }
         //如果上次登录选了自动登录，那进入登录页面也自动勾选自动登录
         if (choseAutoLogin) {
-//            Intent intent = new Intent(MainActivity.this, Login.class);
-//            startActivity(intent);
-          //  finish();
+            Intent intent = new Intent(MainActivity.this, Login.class);
+            startActivity(intent);
+            finish();
         }
-
 
 
         login.setOnClickListener(new View.OnClickListener() {
@@ -146,12 +142,12 @@ public class MainActivity extends Activity implements AMapLocationListener {
 
                 // TODO Auto-generated method stub
 
-                PostCID(PushDemoReceiver.scid,userNameValue,passwordValue);
+                PostCID(PushDemoReceiver.scid, userNameValue, passwordValue);
 
                 //保存用户名和密码
                 editor.putString("USER_NAME", userNameValue);
                 editor.putString("PASSWORD", passwordValue);
-
+                Name = userNameValue;
                 //是否记住密码
                 if (remember.isChecked()) {
                     editor.putBoolean("remember", true);
@@ -167,9 +163,9 @@ public class MainActivity extends Activity implements AMapLocationListener {
                 startActivity(intent);
                 finish();
 
-        }
+            }
 
-    });
+        });
 
         autologin.setOnClickListener(new View.OnClickListener() {
                                          @Override
@@ -190,8 +186,7 @@ public class MainActivity extends Activity implements AMapLocationListener {
             public void onFocusChange(View v, boolean hasFocus) {
                 if (hasFocus) {
 
-                }
-                else {
+                } else {
                     checkname(username.getText().toString());
 
                 }
@@ -215,79 +210,6 @@ public class MainActivity extends Activity implements AMapLocationListener {
             return doubleClick.onKeyDown(keyCode, event);
         }
         return super.onKeyDown(keyCode, event);
-    }
-
-    @Override
-    protected void onResume() {
-        // TODO Auto-generated method stub
-        super.onResume();
-    }
-
-    @Override
-    protected void onDestroy() {
-        // TODO Auto-generated method stub
-        super.onDestroy();
-        mLocationManagerProxy.destroy();
-    }
-
-    @Override
-    public void onLocationChanged(AMapLocation aMapLocation) {
-        //地图定位回调函数
-        if (aMapLocation != null && aMapLocation.getAMapException().getErrorCode() == 0) {
-            String str = aMapLocation.getAddress();
-            double y = aMapLocation.getLatitude();
-            double x = aMapLocation.getLongitude();
-            Log.v("helloworld", str + Double.toString(x));
-            PostXY(x, y, str);
-        }
-    }
-
-
-    public static void PostXY(double x, double y, String pos) {
-        AsyncHttpClient client = new AsyncHttpClient();
-        String url = "http://192.168.191.1/yuankong/home/index/setxy";
-
-        RequestParams params = new RequestParams();
-        params.put("No", 1);
-        params.put("x", x);
-        params.put("y", y);
-        params.put("position", pos);
-        client.post(url, params, new AsyncHttpResponseHandler() {
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, byte[] bytes) {
-
-                if (statusCode == 200) {
-                    Log.v("putxy", new String(bytes));
-                } else
-                    Log.v("putxy", new String(bytes));
-            }
-
-            @Override
-            public void onFailure(int StatusCode, Header[] headers, byte[] bytes, Throwable throwable) {
-                Log.v("putxy", "failure");
-                throwable.printStackTrace();
-            }
-        });
-    }
-
-    @Override
-    public void onLocationChanged(Location location) {
-
-    }
-
-    @Override
-    public void onStatusChanged(String provider, int status, Bundle extras) {
-
-    }
-
-    @Override
-    public void onProviderEnabled(String provider) {
-
-    }
-
-    @Override
-    public void onProviderDisabled(String provider) {
-
     }
 
 
@@ -323,25 +245,23 @@ public class MainActivity extends Activity implements AMapLocationListener {
                 if (i == 200) {
                     if (s.equals("1")) {
                         Toast.makeText(MainActivity.this, "用户名已存在", Toast.LENGTH_LONG).show();
-                        check=true;
                         login.setEnabled(false);
-                    }
-                    else login.setEnabled(true);
+                    } else login.setEnabled(true);
                 }
             }
         });
         return false;
     }
 
-    public void PostCID(String cid,String name,String passwd) {
+    public void PostCID(String cid, String name, String passwd) {
         // Toast.makeText(MainActivity.mactivity,"来了",5000).show();
         AsyncHttpClient client = new AsyncHttpClient();
         String url = "http://192.168.191.1/yuankong/home/user/Add";
 
         RequestParams params = new RequestParams();
         params.put("ClientID", cid);
-        params.put("Name",name);
-        params.put("Passwd",passwd);
+        params.put("Name", name);
+        params.put("Passwd", passwd);
         client.post(url, params, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] bytes) {
