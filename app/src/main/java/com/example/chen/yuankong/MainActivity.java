@@ -46,7 +46,7 @@ public class MainActivity extends Activity {
     public static MainActivity mactivity;
     public static boolean isNotNet = false;
     DoubleClickExitHelper doubleClick = new DoubleClickExitHelper(this);
-
+    public static String host="http://cugyuank.iask.in";
 
     private EditText username;
     private EditText userpassword;
@@ -228,7 +228,7 @@ public class MainActivity extends Activity {
 
     private boolean checkname(String Name) {
         AsyncHttpClient client = new AsyncHttpClient();
-        String url = "http://192.168.191.1/yuankong/home/user/checkname";
+        String url = "http://cugyuank.iask.in/home/user/checkname";
 
         RequestParams params = new RequestParams();
         params.put("Name", Name);
@@ -256,7 +256,7 @@ public class MainActivity extends Activity {
     public void PostCID(String cid, String name, String passwd) {
         // Toast.makeText(MainActivity.mactivity,"来了",5000).show();
         AsyncHttpClient client = new AsyncHttpClient();
-        String url = "http://192.168.191.1/yuankong/home/user/Add";
+        String url = host+"/home/user/Add";
 
         RequestParams params = new RequestParams();
         params.put("ClientID", cid);
