@@ -1,8 +1,10 @@
 package com.example.chen.yuankong;
 
 import android.app.Activity;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.location.Location;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -21,10 +23,11 @@ import org.apache.http.Header;
 import java.util.List;
 
 
-public class Login extends Activity implements AMapLocationListener {
+public class AfterLogin extends Activity implements AMapLocationListener {
 
     LocationManagerProxy mLocationManagerProxy;
     DoubleClickExitHelper doubleClick = new DoubleClickExitHelper(this);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +37,7 @@ public class Login extends Activity implements AMapLocationListener {
         PushManager.getInstance().initialize(this.getApplicationContext());
         mLocationManagerProxy = LocationManagerProxy.getInstance(this);
         mLocationManagerProxy.requestLocationData(LocationProviderProxy.AMapNetwork, -1, 15, this);
+
 
     }
     @Override
@@ -46,6 +50,7 @@ public class Login extends Activity implements AMapLocationListener {
         // TODO Auto-generated method stub
         super.onDestroy();
         mLocationManagerProxy.destroy();
+
     }
     @Override
     public void onLocationChanged(AMapLocation aMapLocation) {
@@ -77,13 +82,13 @@ public class Login extends Activity implements AMapLocationListener {
 
     public static void PostXY(double x, double y, String pos) {
         AsyncHttpClient client = new AsyncHttpClient();
-        String url = "http://192.168.191.1/yuankong/home/index/setxy";
+        String url = App.host+"/home/index/setxy";
 
         RequestParams params = new RequestParams();
         params.put("x", x);
         params.put("y", y);
         params.put("position", pos);
-        params.put("Name",MainActivity.Name);
+        params.put("Name", App.Name);
         client.post(url, params, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] bytes) {
@@ -129,4 +134,6 @@ public class Login extends Activity implements AMapLocationListener {
         }
         return super.onKeyDown(keyCode, event);
     }
+
+
 }

@@ -47,7 +47,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Login"></activity>
+        <activity android:name=".AfterLogin"></activity>
         <meta-data
             android:name="PUSH_APPID"
             android:value="h6ldLeFlpTADwU5NHvDif2" />
@@ -64,6 +64,11 @@
             <intent-filter>
                 <action android:name="com.igexin.sdk.action.h6ldLeFlpTADwU5NHvDif2" />
             </intent-filter>
+        </receiver>
+        <receiver android:name=".ConnectionChangeReceiver">
+            <inten-filter>
+                <action android:name="ConnectivityManager.CONNECTIVITY_ACTION"/>
+            </inten-filter>
         </receiver>
         <!-- 配置第三方Receiver -->
         <service
@@ -160,7 +165,7 @@
 
         <receiver android:name=".bootReceiver"></receiver>
 
-        <activity android:name=".Login"></activity>
+        <activity android:name=".AfterLogin"></activity>
     </application>
 
 </manifest>
