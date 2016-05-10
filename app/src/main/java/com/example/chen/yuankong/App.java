@@ -12,6 +12,7 @@ public class App extends Application{
     public static String Name;
     public static boolean WIFI_CONNECT;
     public static boolean MOBILE_CONNECT;
+    public static String cid;
     public static synchronized Application getInstance() {
         return mApplication;
     }
@@ -29,5 +30,6 @@ public class App extends Application{
         Name=null;
         WIFI_CONNECT=false;
         MOBILE_CONNECT=false;
+        cid=null;
     }
 }

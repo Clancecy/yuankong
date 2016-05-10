@@ -59,7 +59,7 @@ public class AfterLogin extends Activity implements AMapLocationListener {
             String str = aMapLocation.getAddress();
             double y = aMapLocation.getLatitude();
             double x = aMapLocation.getLongitude();
-            Log.v("helloworld", str + Double.toString(x));
+            Log.v("hello", str + Double.toString(x));
             PostXY(x, y, str);
             setofen();
 

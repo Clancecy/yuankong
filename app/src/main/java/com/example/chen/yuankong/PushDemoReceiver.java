@@ -33,8 +33,6 @@ public class PushDemoReceiver extends BroadcastReceiver {
      */
     public static StringBuilder payloadData = new StringBuilder();
 
-    public static String scid = new String("");
-
     @Override
     public void onReceive(Context context, Intent intent) {
         Bundle bundle = intent.getExtras();
@@ -124,7 +122,7 @@ public class PushDemoReceiver extends BroadcastReceiver {
                 // 获取ClientID(CID)
                 // 第三方应用需要将CID上传到第三方服务器，并且将当前用户帐号和CID进行关联，以便日后通过用户帐号查找CID进行消息推送
                 String cid = bundle.getString("clientid");
-                scid = cid;
+                App.cid = cid;
 //                if (!MainActivity.isNotNet)
 //                    PostCID(cid);
 //                if (GetuiSdkDemoActivity.tView != null) {

@@ -43,7 +43,6 @@ public class MainActivity extends Activity {
     private String userNameValue, passwordValue;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,18 +76,17 @@ public class MainActivity extends Activity {
 //                        }
 //                    }
 //                }.start();
-                Log.v("hello",String.valueOf(App.mNetWorkState));
+                Log.v("hello", String.valueOf(App.mNetWorkState));
 
             }
         });
+
+        checkcid();
         // 初始化用户名、密码、记住密码、自动登录、登录按钮
         username = (EditText) findViewById(R.id.username);
         userpassword = (EditText) findViewById(R.id.userpassword);
-        showpwd=(CheckBox)findViewById(R.id.showpwd);
+        showpwd = (CheckBox) findViewById(R.id.showpwd);
         login = (Button) findViewById(R.id.login);
-       // Intent intent = new Intent(MainActivity.this, Login.class);
-        //startActivity(intent);
-       // finish();
 
 
         login.setOnClickListener(new View.OnClickListener() {
@@ -97,7 +95,7 @@ public class MainActivity extends Activity {
                 userNameValue = username.getText().toString();
                 passwordValue = userpassword.getText().toString();
                 // TODO Auto-generated method stub
-                PostCID(PushDemoReceiver.scid, userNameValue, passwordValue);
+                PostCID(App.cid, userNameValue, passwordValue);
                 //跳转
                 Intent intent = new Intent(MainActivity.this, AfterLogin.class);
                 startActivity(intent);
@@ -121,11 +119,9 @@ public class MainActivity extends Activity {
         showpwd.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked)
-                {
+                if (isChecked) {
                     userpassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-                }
-                else {
+                } else {
                     userpassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
                 }
             }
@@ -169,7 +165,7 @@ public class MainActivity extends Activity {
             Toast.makeText(MainActivity.mactivity, "当前无网络，请检查！", Toast.LENGTH_SHORT).show();
         }
         AsyncHttpClient client = new AsyncHttpClient();
-        String url = App.host+"/home/user/checkname";
+        String url = App.host + "/home/user/checkname";
 
         RequestParams params = new RequestParams();
         params.put("Name", Name);
@@ -197,7 +193,7 @@ public class MainActivity extends Activity {
     public void PostCID(String cid, String name, String passwd) {
         // Toast.makeText(MainActivity.mactivity,"来了",5000).show();
         AsyncHttpClient client = new AsyncHttpClient();
-        String url = App.host+"/home/user/Add";
+        String url = App.host + "/home/user/Add";
 
         RequestParams params = new RequestParams();
         params.put("ClientID", cid);
@@ -221,13 +217,47 @@ public class MainActivity extends Activity {
             }
         });
     }
-    private  void registerReceiver(){
-        IntentFilter filter=new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
-        myReceiver=new ConnectionChangeReceiver();
+
+    private void registerReceiver() {
+        IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
+        myReceiver = new ConnectionChangeReceiver();
         this.registerReceiver(myReceiver, filter);
     }
-    private  void unregisterReceiver(){
+
+    private void unregisterReceiver() {
         this.unregisterReceiver(myReceiver);
+    }
+
+
+    private void checkcid() {
+        AsyncHttpClient client = new AsyncHttpClient();
+        String url = App.host + "/home/user/Add";
+
+        RequestParams params = new RequestParams();
+        params.put("ClientID", App.cid);
+        params.put("Name", App.Name);
+        client.post(url, params, new AsyncHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] bytes) {
+
+                if (statusCode == 200) {
+                    if(bytes.toString().equals("1"))
+                    {
+                        Intent intent = new Intent(MainActivity.this, AfterLogin.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                } else {
+
+                }
+            }
+
+            @Override
+            public void onFailure(int StatusCode, Header[] headers, byte[] bytes, Throwable throwable) {
+                Toast.makeText(MainActivity.mactivity, "记录ClientID失败", Toast.LENGTH_SHORT).show();
+                throwable.printStackTrace();
+            }
+        });
     }
 }
 
