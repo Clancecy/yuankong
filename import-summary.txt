@@ -1,24 +1,14 @@
 ECLIPSE ANDROID PROJECT IMPORT SUMMARY
 ======================================
 
-Ignored Files:
---------------
-The following files were *not* copied into the new Gradle project; you
-should evaluate whether these are still needed in your project and if
-so manually move them:
-
-* proguard-project.txt
-
 Moved Files:
 ------------
 Android Gradle projects use a different directory structure than ADT
 Eclipse projects. Here's how the projects were restructured:
 
-* AndroidManifest.xml => vDiskSdk2\src\main\AndroidManifest.xml
-* libs\json_simple-1.1.jar => vDiskSdk2\libs\json_simple-1.1.jar
-* lint.xml => vDiskSdk2\lint.xml
-* res\ => vDiskSdk2\src\main\res\
-* src\ => vDiskSdk2\src\main\java\
+* AndroidManifest.xml => tigerUnlock\src\main\AndroidManifest.xml
+* res\ => tigerUnlock\src\main\res\
+* src\ => tigerUnlock\src\main\java\
 
 Next Steps:
 -----------

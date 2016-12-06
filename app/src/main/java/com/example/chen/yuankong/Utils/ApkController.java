@@ -1,4 +1,4 @@
-package com.example.chen.yuankong;
+package com.example.chen.yuankong.Utils;
 
 import android.content.Context;
 import android.content.Intent;
@@ -41,10 +41,7 @@ public class ApkController {
             // 有root权限，利用静默卸载实现
             return clientUninstall(packageName);
         }else{
-            Uri packageURI = Uri.parse("package:" + packageName);
-            Intent uninstallIntent = new Intent(Intent.ACTION_DELETE,packageURI);
-            uninstallIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(uninstallIntent);
+            HelperUtils.UninstallHelper(packageName,context);
             return true;
         }
     }
