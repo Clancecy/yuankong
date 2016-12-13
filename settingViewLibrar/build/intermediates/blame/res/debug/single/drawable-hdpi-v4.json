@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\switch_btn_bg_white.9.png",
+        "source": "F:\\Android\\code\\yuankong\\settingViewLibrar\\src\\main\\res\\drawable-hdpi\\switch_btn_bg_white.9.png"
+    },
+    {
+        "merged": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\switch_btn_normal.png",
+        "source": "F:\\Android\\code\\yuankong\\settingViewLibrar\\src\\main\\res\\drawable-hdpi\\switch_btn_normal.png"
+    },
+    {
+        "merged": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\switch_btn_bg_green.9.png",
+        "source": "F:\\Android\\code\\yuankong\\settingViewLibrar\\src\\main\\res\\drawable-hdpi\\switch_btn_bg_green.9.png"
+    },
+    {
+        "merged": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\divider.png",
+        "source": "F:\\Android\\code\\yuankong\\settingViewLibrar\\src\\main\\res\\drawable-hdpi\\divider.png"
+    },
+    {
+        "merged": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\switch_btn_pressed.png",
+        "source": "F:\\Android\\code\\yuankong\\settingViewLibrar\\src\\main\\res\\drawable-hdpi\\switch_btn_pressed.png"
+    }
+]

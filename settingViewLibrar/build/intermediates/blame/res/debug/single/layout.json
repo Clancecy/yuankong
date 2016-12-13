@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\res\\merged\\debug\\layout\\setting_view_image_item.xml",
+        "source": "F:\\Android\\code\\yuankong\\settingViewLibrar\\src\\main\\res\\layout\\setting_view_image_item.xml"
+    },
+    {
+        "merged": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\res\\merged\\debug\\layout\\setting_view_basic_item_v.xml",
+        "source": "F:\\Android\\code\\yuankong\\settingViewLibrar\\src\\main\\res\\layout\\setting_view_basic_item_v.xml"
+    },
+    {
+        "merged": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\res\\merged\\debug\\layout\\setting_view_switch_item.xml",
+        "source": "F:\\Android\\code\\yuankong\\settingViewLibrar\\src\\main\\res\\layout\\setting_view_switch_item.xml"
+    },
+    {
+        "merged": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\res\\merged\\debug\\layout\\setting_view_check_item_v.xml",
+        "source": "F:\\Android\\code\\yuankong\\settingViewLibrar\\src\\main\\res\\layout\\setting_view_check_item_v.xml"
+    },
+    {
+        "merged": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\res\\merged\\debug\\layout\\setting_view_basic_item_h.xml",
+        "source": "F:\\Android\\code\\yuankong\\settingViewLibrar\\src\\main\\res\\layout\\setting_view_basic_item_h.xml"
+    },
+    {
+        "merged": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\res\\merged\\debug\\layout\\setting_view_check_item_h.xml",
+        "source": "F:\\Android\\code\\yuankong\\settingViewLibrar\\src\\main\\res\\layout\\setting_view_check_item_h.xml"
+    }
+]

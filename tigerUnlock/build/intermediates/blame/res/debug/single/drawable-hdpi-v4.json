@@ -1,0 +1,54 @@
+[
+    {
+        "merged": "F:\\Android\\code\\yuankong\\tigerUnlock\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\bg1.jpg",
+        "source": "F:\\Android\\code\\yuankong\\tigerUnlock\\src\\main\\res\\drawable-hdpi\\bg1.jpg"
+    },
+    {
+        "merged": "F:\\Android\\code\\yuankong\\tigerUnlock\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\slider_arrow_2.png",
+        "source": "F:\\Android\\code\\yuankong\\tigerUnlock\\src\\main\\res\\drawable-hdpi\\slider_arrow_2.png"
+    },
+    {
+        "merged": "F:\\Android\\code\\yuankong\\tigerUnlock\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\getup_slider_ico_pressed.png",
+        "source": "F:\\Android\\code\\yuankong\\tigerUnlock\\src\\main\\res\\drawable-hdpi\\getup_slider_ico_pressed.png"
+    },
+    {
+        "merged": "F:\\Android\\code\\yuankong\\tigerUnlock\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\slider_ico_alarm.png",
+        "source": "F:\\Android\\code\\yuankong\\tigerUnlock\\src\\main\\res\\drawable-hdpi\\slider_ico_alarm.png"
+    },
+    {
+        "merged": "F:\\Android\\code\\yuankong\\tigerUnlock\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\bg.jpg",
+        "source": "F:\\Android\\code\\yuankong\\tigerUnlock\\src\\main\\res\\drawable-hdpi\\bg.jpg"
+    },
+    {
+        "merged": "F:\\Android\\code\\yuankong\\tigerUnlock\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\iv_start.jpg",
+        "source": "F:\\Android\\code\\yuankong\\tigerUnlock\\src\\main\\res\\drawable-hdpi\\iv_start.jpg"
+    },
+    {
+        "merged": "F:\\Android\\code\\yuankong\\tigerUnlock\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\getup_slider_ico_normal.png",
+        "source": "F:\\Android\\code\\yuankong\\tigerUnlock\\src\\main\\res\\drawable-hdpi\\getup_slider_ico_normal.png"
+    },
+    {
+        "merged": "F:\\Android\\code\\yuankong\\tigerUnlock\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon.png",
+        "source": "F:\\Android\\code\\yuankong\\tigerUnlock\\src\\main\\res\\drawable-hdpi\\icon.png"
+    },
+    {
+        "merged": "F:\\Android\\code\\yuankong\\tigerUnlock\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\iv_end.jpg",
+        "source": "F:\\Android\\code\\yuankong\\tigerUnlock\\src\\main\\res\\drawable-hdpi\\iv_end.jpg"
+    },
+    {
+        "merged": "F:\\Android\\code\\yuankong\\tigerUnlock\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\slider_arrow_3.png",
+        "source": "F:\\Android\\code\\yuankong\\tigerUnlock\\src\\main\\res\\drawable-hdpi\\slider_arrow_3.png"
+    },
+    {
+        "merged": "F:\\Android\\code\\yuankong\\tigerUnlock\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\step2_tip_2.png",
+        "source": "F:\\Android\\code\\yuankong\\tigerUnlock\\src\\main\\res\\drawable-hdpi\\step2_tip_2.png"
+    },
+    {
+        "merged": "F:\\Android\\code\\yuankong\\tigerUnlock\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\bg3.jpg",
+        "source": "F:\\Android\\code\\yuankong\\tigerUnlock\\src\\main\\res\\drawable-hdpi\\bg3.jpg"
+    },
+    {
+        "merged": "F:\\Android\\code\\yuankong\\tigerUnlock\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\slider_arrow_1.png",
+        "source": "F:\\Android\\code\\yuankong\\tigerUnlock\\src\\main\\res\\drawable-hdpi\\slider_arrow_1.png"
+    }
+]

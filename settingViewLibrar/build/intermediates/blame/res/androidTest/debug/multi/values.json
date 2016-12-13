@@ -1,0 +1,489 @@
+[
+    {
+        "outputFile": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 63,
+                    "endOffset": 114
+                },
+                "from": {
+                    "file": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 63,
+                        "endOffset": 114
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 119,
+                    "endColumn": 64,
+                    "endOffset": 179
+                },
+                "from": {
+                    "file": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 119,
+                        "endColumn": 64,
+                        "endOffset": 179
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 184,
+                    "endColumn": 67,
+                    "endOffset": 247
+                },
+                "from": {
+                    "file": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 184,
+                        "endColumn": 67,
+                        "endOffset": 247
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 252,
+                    "endColumn": 64,
+                    "endOffset": 312
+                },
+                "from": {
+                    "file": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 252,
+                        "endColumn": 64,
+                        "endOffset": 312
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 1047,
+                    "endColumn": 54,
+                    "endOffset": 1097
+                },
+                "from": {
+                    "file": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 1047,
+                        "endColumn": 54,
+                        "endOffset": 1097
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 1102,
+                    "endColumn": 57,
+                    "endOffset": 1155
+                },
+                "from": {
+                    "file": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 1102,
+                        "endColumn": 57,
+                        "endOffset": 1155
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 1160,
+                    "endColumn": 53,
+                    "endOffset": 1209
+                },
+                "from": {
+                    "file": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 1160,
+                        "endColumn": 53,
+                        "endOffset": 1209
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 1214,
+                    "endColumn": 54,
+                    "endOffset": 1264
+                },
+                "from": {
+                    "file": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 1214,
+                        "endColumn": 54,
+                        "endOffset": 1264
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 1269,
+                    "endColumn": 51,
+                    "endOffset": 1316
+                },
+                "from": {
+                    "file": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1269,
+                        "endColumn": 51,
+                        "endOffset": 1316
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1321,
+                    "endColumn": 50,
+                    "endOffset": 1367
+                },
+                "from": {
+                    "file": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1321,
+                        "endColumn": 50,
+                        "endOffset": 1367
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1372,
+                    "endColumn": 55,
+                    "endOffset": 1423
+                },
+                "from": {
+                    "file": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1372,
+                        "endColumn": 55,
+                        "endOffset": 1423
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1428,
+                    "endLine": 17,
+                    "endColumn": 12,
+                    "endOffset": 1574
+                },
+                "from": {
+                    "file": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1428,
+                        "endLine": 17,
+                        "endColumn": 12,
+                        "endOffset": 1574
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1579,
+                    "endLine": 20,
+                    "endColumn": 12,
+                    "endOffset": 1725
+                },
+                "from": {
+                    "file": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1579,
+                        "endLine": 20,
+                        "endColumn": 12,
+                        "endOffset": 1725
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1730,
+                    "endLine": 27,
+                    "endColumn": 12,
+                    "endOffset": 2129
+                },
+                "from": {
+                    "file": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1730,
+                        "endLine": 27,
+                        "endColumn": 12,
+                        "endOffset": 2129
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 2134,
+                    "endLine": 33,
+                    "endColumn": 12,
+                    "endOffset": 2471
+                },
+                "from": {
+                    "file": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 2134,
+                        "endLine": 33,
+                        "endColumn": 12,
+                        "endOffset": 2471
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 34,
+                    "startColumn": 4,
+                    "startOffset": 2476,
+                    "endLine": 39,
+                    "endColumn": 12,
+                    "endOffset": 2790
+                },
+                "from": {
+                    "file": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 34,
+                        "startColumn": 4,
+                        "startOffset": 2476,
+                        "endLine": 39,
+                        "endColumn": 12,
+                        "endOffset": 2790
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 2795,
+                    "endLine": 46,
+                    "endColumn": 12,
+                    "endOffset": 3183
+                },
+                "from": {
+                    "file": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 40,
+                        "startColumn": 4,
+                        "startOffset": 2795,
+                        "endLine": 46,
+                        "endColumn": 12,
+                        "endOffset": 3183
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 47,
+                    "startColumn": 4,
+                    "startOffset": 3188,
+                    "endLine": 51,
+                    "endColumn": 12,
+                    "endOffset": 3499
+                },
+                "from": {
+                    "file": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 47,
+                        "startColumn": 4,
+                        "startOffset": 3188,
+                        "endLine": 51,
+                        "endColumn": 12,
+                        "endOffset": 3499
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 52,
+                    "startColumn": 4,
+                    "startOffset": 3504,
+                    "endLine": 56,
+                    "endColumn": 12,
+                    "endOffset": 3802
+                },
+                "from": {
+                    "file": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 52,
+                        "startColumn": 4,
+                        "startOffset": 3504,
+                        "endLine": 56,
+                        "endColumn": 12,
+                        "endOffset": 3802
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 57,
+                    "startColumn": 4,
+                    "startOffset": 3807,
+                    "endLine": 61,
+                    "endColumn": 12,
+                    "endOffset": 4063
+                },
+                "from": {
+                    "file": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 57,
+                        "startColumn": 4,
+                        "startOffset": 3807,
+                        "endLine": 61,
+                        "endColumn": 12,
+                        "endOffset": 4063
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 62,
+                    "startColumn": 4,
+                    "startOffset": 4068,
+                    "endLine": 70,
+                    "endColumn": 12,
+                    "endOffset": 4541
+                },
+                "from": {
+                    "file": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 62,
+                        "startColumn": 4,
+                        "startOffset": 4068,
+                        "endLine": 70,
+                        "endColumn": 12,
+                        "endOffset": 4541
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 71,
+                    "startColumn": 4,
+                    "startOffset": 4546,
+                    "endLine": 79,
+                    "endColumn": 12,
+                    "endOffset": 5019
+                },
+                "from": {
+                    "file": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 71,
+                        "startColumn": 4,
+                        "startOffset": 4546,
+                        "endLine": 79,
+                        "endColumn": 12,
+                        "endOffset": 5019
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 80,
+                    "startColumn": 4,
+                    "startOffset": 5024,
+                    "endLine": 84,
+                    "endColumn": 12,
+                    "endOffset": 5325
+                },
+                "from": {
+                    "file": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 80,
+                        "startColumn": 4,
+                        "startOffset": 5024,
+                        "endLine": 84,
+                        "endColumn": 12,
+                        "endOffset": 5325
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 85,
+                    "startColumn": 4,
+                    "startOffset": 5330,
+                    "endLine": 89,
+                    "endColumn": 12,
+                    "endOffset": 5622
+                },
+                "from": {
+                    "file": "F:\\Android\\code\\yuankong\\settingViewLibrar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 85,
+                        "startColumn": 4,
+                        "startOffset": 5330,
+                        "endLine": 89,
+                        "endColumn": 12,
+                        "endOffset": 5622
+                    }
+                }
+            }
+        ]
+    }
+]

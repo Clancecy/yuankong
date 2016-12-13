@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="azure">#00A2E8</color>
+    <color name="transparency">#00000000</color>
+    <string name="app_name">虎苗锁屏</string>
+    <string name="hello">Hello World, MainActivity!</string>
+    <string name="hint_unlock">拖到此处解锁</string>
+    <style name="Theme.Transparent" parent="@android:style/Theme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+</resources>
